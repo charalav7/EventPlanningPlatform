@@ -1,0 +1,29 @@
+- The platform was designed as a Web Application 
+- In order to have a running system it is very important to include the MySQL database to the localhost
+- After this step, we simply go to any web browser and type: http://localhost/app/index.html 
+- The system in this step is up and running
+- The user must first login in the platform in the correspong page called 'Login'
+- The user gives the username and password. Both of them in our case have the same value. We have the following values:
+    - alice
+    - angelina
+    - antony
+    - chris
+    - daniel
+    - diana
+    - don
+    - helen
+    - jack
+    - janet
+    - julia
+    - kate
+    - magy
+    - marilyn
+    - mike
+    - natalie
+    - nicolas
+    - sarah
+    - simon
+    - tobias
+    - tom
+- It is wise first to enter 'sarah' as a username and password in order to create a new event request
+- After creating new events, a specific flow is accomplished, with specific actions depending on the employee    

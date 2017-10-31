@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>SEP CSO</title>
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/stylecso.css">
+        <link rel="stylesheet" type="text/css" href="css/stylegeneral.css">
+        <script type="text/javascript" src="js/cso.js"></script>
+        <script type="text/javascript" src="js/viewTasks.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">SEP</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li id= "logout"><a href="logout.html">Logout</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+
+        <div class="container" id="makevisible">
+            <br><br><br>
+
+            <div id = "displayactor"></div>
+            <br>
+            <div class="well form-horizontal" id="contact_form">
+                <fieldset>
+                    <!-- Form Name -->
+                    <legend>New Event Request</legend>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Client Record</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input  id="clientRecord" placeholder="Name" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Event Type</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-play-circle"></i></span>
+                                <input id="eventType" placeholder="Type of event" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">From</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                <input id="from" placeholder="Insert Date" class="form-control" type="datetime-local">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">To</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                <input id="to" placeholder="Insert Date" class="form-control" type="datetime-local">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Number input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Expected number of attendees</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-equalizer"></i></span>
+                                <input id="attendees" placeholder="Attendees" class="form-control" type="number">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- radio checks -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Preferences</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="checkbox" id="decorations" /> Decorations
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="checkbox" id="parties" /> Parties
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="checkbox" id="photos"  /> Photos/filming
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="checkbox" id="breakfast" /> Breakfast, lunch, dinner
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="checkbox" id="drinks"  /> Soft/hot drinks
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Number input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Expected budget</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
+                                <input id="budget" placeholder="Budget" class="form-control" type="number" onkeyup="pressenter()">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text area -->
+                    <!--
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Project Description</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+                            </div>
+                        </div>
+                    </div> -->
+                    <br>
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-5 control-label"></label>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-warning" id= "submit" onclick="validate()"> Send <span class="glyphicon glyphicon-send" ></span></button>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

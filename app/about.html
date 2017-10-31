@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>SEP About</title>
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/stylemain.css">
+        <script type="text/javascript" src="js/checklogin.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">SEP</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" id= "isActorOn" style="display: none;"></a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="#">About</a></li>
+                        <li><a href="tasklist.html" id= "isTaskOn" style="display: none;"></a></li>
+                        <li><a href="login.html" id= "islogin"></a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container" id="tocover">
+            
+            <h1>About this web platform</h1>
+            <br>
+            <p class="h4 text-justify">A new events planning company “Swedish Events Planners SEP” launched their business in
+                Stockholm. SEP organizes events such as workshops, conferences, summer schools etc.
+                They are responsible of all the details related to the event, for example:
+                decorations, food, beverages, filming, music and many other details. SEP plans everything
+            related to the event from A to Z. SEP handles parallel events according to each event requirements.</p>
+
+            <p class="h4 text-justify">Our platform has been designed to handle all the internal system of the company. Every employee has to 
+            login to perform actions according to his/her role. The UI for all the employees is user friendly 
+            and easy to understand. All the input values return a confirmation output if everything worked fine.
+            The platform stores and retreives all the data to/from MySQL, which, at the time being, runs in our localhost.
+            The web application uses the technologies of HTML, CSS, JavaScript, PHP, Ajax and Bootstrap. For the purposes
+            of this project we didn't consider that much the security of the system.</p>
+        </div>
+        <!-- /.container -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

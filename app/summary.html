@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>SEP Event Summary</title>
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/stylecso.css">
+        <link rel="stylesheet" type="text/css" href="css/stylegeneral.css">
+        <link rel="stylesheet" type="text/css" href="css/styleSummary.css">
+        <script type="text/javascript" src="js/viewTasks.js"></script>
+        <script type="text/javascript" src="js/summary.js"></script>
+        <script type="text/javascript" src="js/js.cookie.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">SEP</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li id= "checklogin"><a href="tasklist.html">Tasklist</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container" id="makevisible">
+            <br><br><br>
+            <div id = "displayactor"></div>
+            <br>
+            <div class="well form-inline text-left" id="contact_form">
+                <fieldset>
+                    <!-- Form Name -->
+                    <legend class="text-left">Client Request Details</legend>
+                    
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">Event Type</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-play-circle"></i></span>
+                                <input id="eventType" placeholder="Type of event" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <span>&nbsp&nbsp&nbsp</span>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">Description</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                <input id="description" placeholder="Describe the event" class="form-control" type="text">
+
+                            </div>
+                        </div>
+                    </div>
+                    <span>&nbsp&nbsp&nbsp</span>
+
+                    <!-- Number input-->
+                    <div class="form-group">
+                        <label class="control-label">Expected number</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-equalizer"></i></span>
+                                <input id="attendees" placeholder="Attendees" class="form-control" type="number">
+                            </div>
+                        </div>
+                    </div>
+                    <span>&nbsp&nbsp&nbsp</span>
+
+                    <!-- Number input-->
+                    <div class="form-group">
+                        <label class="control-label">Planned budget</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
+                                <input id="budget" placeholder="Expected budget" class="form-control" type="number">
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">From</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                <input id="from" placeholder="Insert Date" class="form-control" type="datetime-local">
+                            </div>
+                        </div>
+                    </div>
+                    <span>&nbsp&nbsp&nbsp</span>
+                    <div class="form-group">
+                        <label class="control-label">To</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                <input id="to" placeholder="Insert Date" class="form-control" type="datetime-local">
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">Decorations</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-tree-deciduous"></i></span>
+                                <textarea id="decorations" placeholder="Describe the decorations..." class="form-control" rows="3" cols="68"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <span>&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">Food</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-apple"></i></span>
+                                <textarea id="food" placeholder="Describe the food needs..." class="form-control" rows="3" cols="68"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">Drinks</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-glass"></i></span>
+                                <textarea id="drinks" placeholder="Describe the drink needs..." class="form-control" rows="3" cols="68"></textarea>
+                            </div>
+                        </div>
+                    </div>  
+                    <span>&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">Filming</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-facetime-video"></i></span>
+                                <textarea id="filming" placeholder="Describe the filming needs..." class="form-control" rows="3" cols="68"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">Audio</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-music"></i></span>
+                                <textarea id="audio" placeholder="Describe the audio needs..." class="form-control" rows="3" cols="68"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <span>&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">Artwork</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+                                <textarea id="artwork" placeholder="Describe the artwork needs..." class="form-control" rows="3" cols="68"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">Computer-related issues</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-cloud"></i></span>
+                                <textarea id="computer" placeholder="Describe the computer needs..." class="form-control" rows="3" cols="68"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <span>&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label">Other</label>
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-alert"></i></span>
+                                <textarea id="other" placeholder="Describe any other needs..." class="form-control" rows="3" cols="68"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br><br>
+
+                    <!-- Button -->
+                    <div class="form-group controlbutton">
+                        <label class="control-label"></label>
+                        <div class="">
+                            <button type="submit" class="btn btn-warning" id= "submitSummary" onclick="submitSummary()"> Send <span class="glyphicon glyphicon-send" ></span></button>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <!-- /.container -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
